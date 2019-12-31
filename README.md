@@ -19,3 +19,7 @@ Then include the compomenet in your HTML as such, where `other-component` is whe
 
 <pagination :pagination_data.sync="pagination_data" :pagination_goto.sync="pagination_goto"></pagination>
 ```
+
+Within `other-component` we watch for when `pagination_goto` changes upon clicking a link in the `pagination`, and call the ajax function passing it the page number.
+
+Within `pagination` we watch for when `pagination_data` is received and update the current page number.
