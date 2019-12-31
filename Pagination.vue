@@ -8,11 +8,14 @@
                 <template v-for="n in pagination_data.last_page">
                     <a v-if="pagination_data.current_page === n" class="page-numbers current" v-html="n"></a>
                     <template v-else>
-                        <a v-if="((
-                            (n < (pagination_data.current_page + 3) && n <= 6 && (pagination_data.current_page <= 4)) || (n > (pagination_data.last_page - 1))
+                        <a v-if="(
+                                (
+                                    (n < (pagination_data.current_page + 3) && n <= 6 && (pagination_data.current_page <= 4)) || (n > (pagination_data.last_page - 1))
+                                ) || (
+                                    (n > (pagination_data.current_page - 3) && n > (pagination_data.last_page - 6) && (pagination_data.current_page > (pagination_data.last_page - 4))) ||
+                                    (n === 1)
+                                )
                             ) || (
-                            (n > (pagination_data.current_page - 3) && n > (pagination_data.last_page - 6) && (pagination_data.current_page > (pagination_data.last_page - 4))) || (n === 1)
-                            )) || (
                                 (n > (pagination_data.current_page - 3)) && n < (pagination_data.current_page + 3)
                             )
                             " class="page-numbers" v-on:click.prevent="goto(n)" v-html="n"></a>
