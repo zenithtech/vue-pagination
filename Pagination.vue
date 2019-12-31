@@ -40,8 +40,9 @@
             pagination_data: function(){
                 const t = this;
 
-                if(typeof t.pagination_data.current_page === 'number'){
+                if(typeof t.pagination_data.current_page === 'number' && t.currentPage !== t.pagination_data.current_page){
                     t.$emit('update:pagination_goto', t.pagination_data.current_page);
+                    t.currentPage = t.pagination_data.current_page;
                 } else {
                     t.$emit('update:pagination_goto', false);
                 }
@@ -51,6 +52,12 @@
             goto(page){
                 this.$emit('update:pagination_goto', page);
             }
+        },
+        data() {
+            return {
+                currentPage: 1
+            };
         }
     }
 </script>
+
