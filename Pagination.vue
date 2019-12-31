@@ -17,8 +17,7 @@
                                 )
                             ) || (
                                 (n > (pagination_data.current_page - 3)) && n < (pagination_data.current_page + 3)
-                            )
-                            " class="page-numbers" v-on:click.prevent="goto(n)" v-html="n"></a>
+                            )" class="page-numbers" v-on:click.prevent="goto(n)" v-html="n"></a>
                         <span v-else-if="(n === (pagination_data.current_page - 3)) || n === (pagination_data.current_page + 3)" class="page-numbers dots">…</span>
                     </template>
                 </template>
