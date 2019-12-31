@@ -31,15 +31,18 @@
             getUsers(page = ''){
                 const   t = this;
 
-                if(typeof page === 'number'){
+                if( page !== false &&
+                    typeof page === 'number' &&
+                    page !== t.data.users.current_page
+                ){
                     page = '?page=' + page;
-                }
 
-                axios.get('/users/' + page)
-                    .then(response => {
-                        t.data = response.data;
-                        t.$emit('update:pagination_data', t.data.users);
-                    });
+                    axiosUsers.get('/directory/' + routeName + page)
+                        .then(response => {
+                            t.data = response.data;
+                            t.$emit('update:pagination_data', t.data.users);
+                        });
+                }
             }
         },
         mounted() {
@@ -47,7 +50,11 @@
         },
         data() {
             return {
-                data: []
+                data: {
+                    users: {
+                        current_page: 0
+                    }
+                }
             };
         }
     }
