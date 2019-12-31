@@ -1,5 +1,5 @@
 # vue-pagination
-Vue.JS pagination component which mimics Wordpress pagination links
+Vue.JS pagination component, mimics WordPress pagination links, uses Bootstrap formatting.
 
 ![foo](https://raw.githubusercontent.com/zenithtech/vue-pagination/master/menu.gif)
 
