@@ -28,16 +28,6 @@
             }
         },
         methods: {
-            routeChange(to){
-                const t = this;
-
-                t.getUsers();
-            },
-            initComp(){
-                const t = this;
-
-                t.getUsers();
-            },
             getUsers(page = ''){
                 const   t = this;
 
@@ -53,9 +43,7 @@
             }
         },
         mounted() {
-            const t = this;
-
-            t.initComp();
+            this.getUsers();
         },
         data() {
             return {
