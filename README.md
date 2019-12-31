@@ -4,6 +4,20 @@ Vue.JS pagination component, mimics WordPress pagination links, uses Bootstrap f
 ![foo](https://raw.githubusercontent.com/zenithtech/vue-pagination/master/menu.gif)
 
 
+Add the `pagination_data` and `pagination_goto` properties to the app:
+```
+const main = new Vue({
+    el: '#main',
+    data() {
+        return {
+		pagination_data: [],
+		pagination_goto: 1
+        };
+    }
+});
+```
+
+
 Initialize your component within your app:
 ```
 Vue.component(
