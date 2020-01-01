@@ -1,0 +1,99 @@
+
+.pagination {
+    user-select: none;
+}
+.pagination .page-numbers {
+    vertical-align: middle;
+    line-height: 50px;
+    white-space: nowrap;
+    display: inline-block;
+    padding: 0 10px;
+    font-weight: 900;
+    text-decoration: none;
+    background-color: #fff;
+    color: rgb(37, 21, 75) !important;
+    border: 1px solid rgb(37, 21, 75);
+    height: 52px;
+    width: auto;
+    min-width: 52px;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Brandon Grotesque';
+    font-size: 20px;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+.pagination .page-numbers.disabled {
+    cursor: default;
+    pointer-events: none;
+    color: #eee !important;
+}
+
+.pagination .page-numbers.current {
+    cursor: default;
+    pointer-events: none;
+}
+
+.pagination .page-numbers.current,
+.pagination .page-numbers:hover {
+    background-color: rgb(37, 21, 75);
+    color: #fff !important;
+}
+
+.pagination .page-numbers.dots {
+    border: 0;
+    line-height: 42px;
+}
+
+.pagination .page-numbers.dots:hover {
+    background-color: #fff;
+    cursor: default;
+    color: rgb(37, 21, 75) !important;
+}
+
+.pagination .page-numbers.dots:before {}
+
+.pagination .page-numbers.prev i.fa,
+.pagination .page-numbers.next i.fa {
+    font-size: 32px;
+    line-height: 52px;
+    vertical-align: top;
+    padding: 0 10px;
+    display: inline-block;
+    height: 52px;
+}
+
+.pagination .page-numbers.prev,
+.pagination .page-numbers.next {
+    border: 0;
+}
+
+.pagination .page-numbers.prev:hover,
+.pagination .page-numbers.next:hover {
+    background-color: rgb(37, 21, 75);
+}
+
+.pagination .page-numbers.prev:hover i.fa,
+.pagination .page-numbers.next:hover i.fa {
+    color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+    .pagination .page-numbers {
+        padding: 0 5px;
+        min-width: 32px;
+        height: 32px;
+        border-radius: 3px;
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 400;
+    }
+
+    .pagination .page-numbers.prev i.fa,
+    .pagination .page-numbers.next i.fa {
+        line-height: 32px;
+        padding: 0 5px;
+        height: 32px;
+    }
+}
