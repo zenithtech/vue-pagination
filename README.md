@@ -7,7 +7,7 @@ Uses [FontAwesome](https://fontawesome.com) and [Bootstrap](https://getbootstrap
 
 
 Add the `pagination_data` and `pagination_goto` properties to the app:
-```
+```javascript
 const main = new Vue({
     el: '#main',
     data() {
@@ -21,7 +21,7 @@ const main = new Vue({
 
 
 Initialize your component within your app:
-```
+```javascript
 Vue.component(
 	'pagination',
 	require('./components/Pagination.vue').default
@@ -30,7 +30,7 @@ Vue.component(
 
 Then include the compomenet in your HTML as such, where `other-component` is where Ajax calls are made:
 
-```
+```html
 <other-component :pagination_data.sync="pagination_data" :pagination_goto.sync="pagination_goto"></other-component>
 
 <pagination :pagination_data.sync="pagination_data" :pagination_goto.sync="pagination_goto"></pagination>
