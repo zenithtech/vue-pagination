@@ -18,8 +18,7 @@
     export default {
         name: 'other-component',
         props: [
-            'pagination_data',
-            'pagination_goto'
+            'pagination_data'
         ],
         watch: {
             pagination_goto: {
