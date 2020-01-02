@@ -51,7 +51,7 @@
             return {
                 data: {
                     users: {
-                        current_page: 0
+                        current_page: 1
                     }
                 }
             };
